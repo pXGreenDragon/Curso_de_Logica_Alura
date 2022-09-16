@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+	var anoChegada = 1500;
+	var anoMedia = 28;
+	var anoAtual = 2022;
+	var geracoes = Math.round((anoAtual - anoChegada)/anoMedia);
+
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	mostra("Se passaram " + geracoes + " gerações!");
+</script>

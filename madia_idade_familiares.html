@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+
+	var idade = 0;
+
+	var nPessoas = parseInt(prompt("Quantas pessoas tem em sua família? Digite abaixo."));
+
+	for (var i = 1; i <= nPessoas; i++) {
+		var idadePessoa = parseInt(prompt("Digite a idade " + i));
+		idade = idade + idadePessoa;
+	}
+
+	mostra("<h1>A média das idades digitadas é " + (idade/nPessoas) + "</h1>");
+
+
+</script>

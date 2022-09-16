@@ -1,0 +1,97 @@
+<meta charset="UTF-8">
+
+<h1>Jogo de Adivinhação</h1>
+Tente acertar 2 números!<br>
+Eles estão entre 1 e 10 - e são gerados aleatóriamente a cada "refresh" da página!<br><br>
+
+<input/>
+<button>Clique para tentar!</button>
+
+<script>
+
+
+    function sorteia() {
+    	return Math.round(Math.random() * 10);
+    }
+
+
+
+    function sorteiaNumeros(quantidade) {
+
+    	var segredos = [];
+    	var numero = 1;
+
+    	while(numero <= quantidade) {
+    		var numeroAleatorio = sorteia();
+    		if(numeroAleatorio !== 0){
+    			var achou = false;
+
+    		
+    			for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+    				if(segredos[posicao] == numeroAleatorio) {
+    					achou = true;
+    					break;
+    				}
+    			}
+
+    		if (achou == false) {
+    			segredos.push(numeroAleatorio);
+    			numero++;
+    			}
+    		}
+
+    	}
+
+    	return segredos;
+    }
+
+
+
+    var segredos = sorteiaNumeros(2);
+    
+
+
+    var input = document.querySelector("input");
+        input.focus();
+
+
+
+    function verifica() {
+
+
+
+    var achou = false;
+
+
+
+    for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+        if(input.value == segredos[posicao]) {
+
+            alert("Você ACERTOU!");
+            achou = true;
+            break;
+        }
+    }
+
+    if(achou == false) {
+        alert("Você ERROU!");
+    }
+
+    input.value = "";
+    input.focus();
+
+    }
+
+
+
+    var button = document.querySelector("button");
+
+
+
+    button.onclick = verifica;
+
+
+
+</script>

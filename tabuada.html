@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+
+	var numero = parseInt(prompt("Digite a tabuada desejada!"));
+	
+	//var multiplicador = 1;
+	//while(multiplicador <= 10) {
+		//mostra(numero + " vezes " + multiplicador + " é igual a " + (numero*multiplicador));
+		//multiplicador = multiplicador + 1;
+	//}
+
+	for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+		mostra(numero + " vezes " + multiplicador + " é igual a " + (numero*multiplicador));
+	}
+
+
+</script>

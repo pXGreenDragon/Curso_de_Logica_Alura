@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function mostrarTexto(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var valorTotal = 0;
+	var quantConta = parseInt(prompt("Quantas contas deseja cadastrar?"));
+
+	var contador = 1;
+	while (quantConta >= contador) {
+		var valorConta = parseFloat(prompt("Qual o valor da conta " + contador + "?"));
+		valorTotal = valorTotal + valorConta;
+		contador++;
+	}
+
+	mostrarTexto("O total da sua fatura é: R$ " + valorTotal + "!");
+
+
+
+</script>
